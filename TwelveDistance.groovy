@@ -25,10 +25,10 @@ pointThree.xCoOrd = Double.parseDouble(s)
 println "Please enter the Y coordinate of point three: "
 s = System.console().readLine()
 pointThree.yCoOrd = Double.parseDouble(s)
-
-double distP1P2 = Math.sqrt(pointTwo.xCoOrd - pointOne.xCoOrd) + (pointTwo.yCoOrd - pointOne.yCoOrd)
-double distP1P3 = Math.sqrt(pointThree.xCoOrd - pointOne.xCoOrd) + (pointThree.yCoOrd - pointOne.yCoOrd)
-double distP2P3 = Math.sqrt(pointThree.xCoOrd - pointTwo.xCoOrd) + (pointThree.yCoOrd - pointTwo.yCoOrd)
+square = { it * it }
+double distP1P2 = Math.sqrt(square(pointTwo.xCoOrd - pointOne.xCoOrd) + square(pointTwo.yCoOrd - pointOne.yCoOrd))
+double distP1P3 = Math.sqrt(square(pointThree.xCoOrd - pointOne.xCoOrd) + square(pointThree.yCoOrd - pointOne.yCoOrd))
+double distP2P3 = Math.sqrt(square(pointThree.xCoOrd - pointTwo.xCoOrd) + square(pointThree.yCoOrd - pointTwo.yCoOrd))
 
 if ((distP1P2 > distP1P3) && (distP1P2 > distP2P3))
 {
