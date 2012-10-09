@@ -43,4 +43,3 @@ println "Points 1 and 2 are furthest apart."
         println "Points 2 and 3 are furthest apart."
         }
         
-
